@@ -11,10 +11,22 @@
             height: auto;
         }
     </style>
+    <script>
+        window.addEventListener('load', function() {
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("/serviceWorker.js")
+              .then(function(registration) {
+                console.log("serviceWorker registed.");
+              }).catch(function(error) {
+                console.warn("serviceWorker error.", error);
+              });
+          }
+        });
+        </script>
 </head>
 <body>
     <h1>Under Constructing...</h1>
     <p>作成中です。しばらく待ってね。</p>
-    <img src="./img/MORO_MG_1856_TP_V.jpg" alt="doc" size="1px">
+    <img src="./images/MORO_MG_1856_TP_V.jpg" alt="doc">
 </body>
 </html>
